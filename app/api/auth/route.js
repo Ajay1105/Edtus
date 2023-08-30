@@ -28,6 +28,7 @@ export async function POST(req, res) {
     section: data.section,
     schoolID: data.schoolID,
     school: sch._id,
+    score: -1,
   });
   await User.save();
   

@@ -1,7 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const page = () => {
+const Router = useRouter();
+
   const [schoolID, setSchoolID] = useState("");
   const [classNumber, setClassNumber] = useState("");
   const [sectionNumber, setSectionNumber] = useState("");
@@ -33,8 +36,8 @@ const page = () => {
         throw new Error("Network response was not ok");
       }
 
-      const data = await response.json();
-      console.log(data);
+      Router.push('/');
+      
     } catch (error) {
       console.error("Error fetching data:", error);
     }

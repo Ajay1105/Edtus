@@ -1,7 +1,7 @@
 import { clerkClient } from "@clerk/nextjs";
 import { getAuth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-import connectDB from "../mongodb/connectDB";
+import connectDB from "../mongodb/connectDB.js"
 import { Student } from "@/Model/Student";
 import mongoose from "mongoose";
 
