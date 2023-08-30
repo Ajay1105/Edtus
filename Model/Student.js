@@ -45,13 +45,12 @@ const schoolSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    noOfRegistration:{
-        type: Number,
-    },
-    topper:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Student',
+    students:[
+      {
+        type:  mongoose.Schema.Types.ObjectId,
+        ref :  'Student' // Reference to the User collection
     }
+    ],
 });
 
 const School = mongoose.models.School || mongoose.model("School", schoolSchema)

@@ -1,5 +1,4 @@
 import { ClerkProvider } from '@clerk/nextjs'
-import Navbar from '@/components/homepage/Navbar' 
 import './globals.css'
 
 export const metadata = {
@@ -15,7 +14,6 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
-          <Navbar/>
           {children}
         </body>
       </html>

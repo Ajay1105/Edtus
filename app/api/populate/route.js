@@ -13,32 +13,17 @@ export async function POST(req, res) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const user = userId ? await clerkClient.users.getUser(userId) : null;
-
   await connectDB();
 
-  var id = data.schoolID
-  var sch = await School.findOne({ id: id }).exec();
+  var id = data.id
 
-  
-  const User = new Student({
-    userId: userId,
-    name: data.name,
-    class: data.class,
-    section: data.section,
-    schoolID: data.schoolID,
-    school: sch._id,
-  });
-  await User.save();
-  
-  // const respo = await School.findOne({ id: id }).populate('students').exec();
-  // console.log(respo);
+  const respo = await School.findOne({ id: id }).populate('students').exec();
   
   mongoose.connection.close();
 
   return NextResponse.json(
     {
-      result: User,
+      result: "User",
     },
     { status: 200 }
   );

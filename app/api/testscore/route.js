@@ -1,8 +1,8 @@
-import { auth, clerkClient } from "@clerk/nextjs";
+import { clerkClient } from "@clerk/nextjs";
 import { getAuth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import connectDB from "../mongodb/connectDB";
-import { Student, School } from "@/Model/Student";
+import { Student } from "@/Model/Student";
 import mongoose from "mongoose";
 
 export async function POST(req, res) {
@@ -17,28 +17,15 @@ export async function POST(req, res) {
 
   await connectDB();
 
-  var id = data.schoolID
-  var sch = await School.findOne({ id: id }).exec();
+  const score2 = data.score;
 
-  
-  const User = new Student({
-    userId: userId,
-    name: data.name,
-    class: data.class,
-    section: data.section,
-    schoolID: data.schoolID,
-    school: sch._id,
-  });
-  await User.save();
-  
-  // const respo = await School.findOne({ id: id }).populate('students').exec();
-  // console.log(respo);
-  
+  const result = await Student.findOneAndUpdate({ userId: userId },{score:score2},{new:true});
+
   mongoose.connection.close();
 
   return NextResponse.json(
     {
-      result: User,
+      result: result,
     },
     { status: 200 }
   );

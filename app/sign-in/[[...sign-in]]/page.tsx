@@ -1,5 +1,9 @@
 import { SignIn } from "@clerk/nextjs";
- 
+
 export default function Page() {
-  return <SignIn redirectUrl="/"/>;
+  return (
+    <div className="flex items-center justify-center align-middle w-[100vw] h-[100vh]">
+      <SignIn redirectUrl="/checkuser" />
+    </div>
+  )
 }
