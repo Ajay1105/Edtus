@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import AlreadySubmitted from "../../components/question/AlreadySubmitted.jsx";
+import Loading from '@/components/loading/Loading.jsx'
 
 const Questionmap = dynamic(
   () => import("../../components/question/QuestionMap.jsx"),
@@ -34,7 +35,7 @@ export default function Home() {
     <div>
       {testStatus ? (
         loading ? (
-          <div>Loading</div>
+          <Loading/>
         ) : (
           <AlreadySubmitted/>
         )

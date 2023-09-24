@@ -1,11 +1,12 @@
-import {Hero, Mission, Navbar} from '@/components/homepage'
+import {Hero, Mission, Navbar, Contact} from '@/components/homepage'
  
 export default function Home() {
   return (
-    <div>
+    <div>  
       <Navbar/>
       <Hero/>
       <Mission/>
+      <Contact/>
     </div>
   )
-}
+} 

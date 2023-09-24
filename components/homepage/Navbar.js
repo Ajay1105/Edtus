@@ -19,18 +19,18 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex justify-between px-10 md:px-20 font-sans font-semibold text-white align-middle bg-[#001065]">
+    <div className="flex sticky navBackground justify-between px-10 md:px-20 font-sans font-semibold bg-[#793FDF] text-white align-middle bg-transparent">
       <Image src={logo} width={179} height={66} className="py-8 md:py-3"/>
       <ul className="hidden md:flex flex-row justify-between w-1/3 text-lg text-[#E36E20] items-center md:visible ">
-        <li className="hover:text-stone-400 px-2">Home</li>
-        <li className="hover:text-stone-400 px-2">Blog</li>
-        <li className="hover:text-stone-400 px-2" onClick={handleTest}>Test</li>
-        <li className="hover:text-stone-400 px-2"><UserButton afterSignOutUrl="/"/></li>
+        <li className="hover:text-stone-400 px-2 text-2xl">Home</li>
+        <li className="hover:text-stone-400 px-2 text-2xl">Blog</li>
+        <li className="hover:text-stone-400 px-2 text-2xl" onClick={handleTest}>Test</li>
+        <li className="hover:text-stone-400 px-2"><UserButton className="w-6 h-6" afterSignOutUrl="/"/></li>
       </ul>
       <button
         className={`${
           isMenuOpen ? "hidden" : "block"
-        } md:hidden text-white text-2xl`}
+        } md:hidden text-black text-3xl`}
         onClick={toggleMenu}
       >
         ☰

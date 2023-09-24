@@ -1,9 +1,10 @@
+"use-client"
 const arr = [
-  { name: "Abc", id: 1234 },
-  { name: "Abc", id: 1234 },
-  { name: "Abc", id: 1234 },
-  { name: "Abc", id: 1234 },
-  { name: "Abc", id: 1234 },
+  { name: "Abc", code: 1234 },
+  { name: "Def", code: 5678 },
+  { name: "Ghi", code: 9012 },
+  { name: "Jkl", code: 3456 },
+  { name: "Mno", code: 7890 },
 ];
 
 const page = () => {
@@ -16,10 +17,10 @@ const page = () => {
             <th className="outline outline-black px-2">School Name</th>
             <th className="px-2">School Code</th>
           </tr>
-          {arr.map((a) => (
-            <tr className="outline outline-black">
-              <td className="outline outline-black px-2">a.name</td>
-              <td className="px-2">a.code</td>
+          {arr.map((a, index) => (
+            <tr className="outline outline-black" key={index}>
+              <td className="outline outline-black px-2">{a.name}</td>
+              <td className="px-2">{a.code}</td>
             </tr>
           ))}
         </table>

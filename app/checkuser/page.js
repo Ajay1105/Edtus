@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
+import Loading from '@/components/loading/Loading.jsx'
 
 const page = () => {
   const router = useRouter();
@@ -37,7 +38,7 @@ const page = () => {
     fetchData();
   }, []);
 
-  return <div>Loading</div>;
+  return <div><Loading/></div>;
 };
 
 export default page;

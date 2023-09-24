@@ -1,9 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import Loading from "@/components/loading/Loading.jsx";
 
 const page = () => {
-const Router = useRouter();
+  const Router = useRouter();
 
   const [schoolID, setSchoolID] = useState("");
   const [classNumber, setClassNumber] = useState("");
@@ -36,20 +37,28 @@ const Router = useRouter();
         throw new Error("Network response was not ok");
       }
 
-      Router.push('/');
-      
+      Router.push("/");
     } catch (error) {
       console.error("Error fetching data:", error);
     }
     setLoading(false);
   };
 
+  const handleClassNumberChange = (event) => {
+    // Check if the entered value is a number before updating the state
+    // Check if the entered value is a number before updating the state
+    const inputValue = event.target.value;
+    if (/^\d+$/.test(inputValue) || inputValue === "") {
+      setClassNumber(inputValue);
+    }
+  };
+
   return (
-    <div className="flex flex-col w-full h-[100vh] justify-center items-center align-middle">
+    <div className="flex flex-col w-full h-[100vh] justify-center items-center align-middle outline outline-[#FF6600]">
       {loading ? (
-        <h1>Loading</h1>
+        <Loading />
       ) : (
-        <>
+        <div className="outline outline-[#FF6600] rounded-xl p-8">
           <h1 className="text-[#FF6600] text-5xl py-8">Provide Your Details</h1>
           <form
             onSubmit={handleSubmit}
@@ -61,8 +70,9 @@ const Router = useRouter();
                 <input
                   type="text"
                   id="schoolID"
+                  required="true"
                   value={schoolID}
-                  className=" outline-1 mx-5 my-3 outline-black outline rounded-lg focus:outline-2"
+                  className="px-2 outline-1 mx-5 my-3 outline-black outline rounded-lg focus:outline-2"
                   onChange={(event) => setSchoolID(event.target.value)}
                 />
               </div>
@@ -72,9 +82,10 @@ const Router = useRouter();
                 <input
                   type="text"
                   id="classNumber"
+                  required="true"
                   value={classNumber}
-                  className=" outline-1 mx-5 my-3 outline-black outline rounded-lg  focus:outline-2"
-                  onChange={(event) => setClassNumber(event.target.value)}
+                  className="px-2 outline-1 mx-5 my-3 outline-black outline rounded-lg  focus:outline-2"
+                  onChange={(event) => handleClassNumberChange(event)}
                 />
               </div>
 
@@ -83,8 +94,9 @@ const Router = useRouter();
                 <input
                   type="text"
                   id="sectionNumber"
+                  required="true"
                   value={sectionNumber}
-                  className=" outline-1 mx-5 my-3 outline-black outline rounded-lg  focus:outline-2"
+                  className="px-2 outline-1 mx-5 my-3 outline-black outline rounded-lg  focus:outline-2"
                   onChange={(event) => setSectionNumber(event.target.value)}
                 />
               </div>
@@ -94,18 +106,19 @@ const Router = useRouter();
                 <input
                   type="text"
                   id="name"
+                  required="true"
                   value={name}
-                  className=" outline-1 mx-5 my-3 outline-black outline rounded-lg  focus:outline-2"
+                  className="px-2 outline-1 mx-5 my-3 outline-black outline rounded-lg  focus:outline-2"
                   onChange={(event) => setname(event.target.value)}
                 />
               </div>
 
-              <button className="text-white rounded-xl bg-[#FF6600] hover:bg-white hover:text-[#FF6600] px-3 py-2 text-2xl">
+              <button className="text-white rounded-xl bg-[#FF6600] hover:bg-white hover:text-[#FF6600] hover:outline hover:out-[#FF6600] px-3 py-2 text-2xl">
                 Submit
               </button>
             </div>
           </form>
-        </>
+        </div>
       )}
     </div>
   );

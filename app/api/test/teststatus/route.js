@@ -12,7 +12,6 @@ export async function GET(req, res) {
   const student = await Student.findOne({userId:userId}).exec();
   const score = student.score;
   
-  
   mongoose.connection.close();
   
   if(score == -1){
