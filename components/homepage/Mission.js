@@ -17,11 +17,11 @@ const Mission = () => {
             students, and educators for a brighter future.
           </p>
         </div>
-        <Image src={laptop} height={780} width={1100} className="md:ml-32"/>
+        <Image alt="laptop" src={laptop} height={780} width={1100} className="md:ml-32"/>
       </div>
 
       <div className="flex w-4/5 pt-8 flex-row justify-between align-middle items-center">
-        <Image src={laptop} height={780} width={1100} className="md:mr:32" />
+        <Image alt="laptop" src={laptop} height={780} width={1100} className="md:mr:32" />
         <div className="flex flex-col md:ml-20">
           <h1 className="orange_gradient text-5xl">Why Edtus Matters</h1>
           {/* <p className=" head_text ml-[4px] text-2xl">Empower Learning through Technology</p>*/}
