@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useMemo } from "react";
 
 const Card = ({
@@ -31,9 +32,11 @@ const Card = ({
         </b>
         <div className="absolute top-[59px] left-[0px] text-lgi-2 leading-[20px] inline-block w-[258px]">{`Lorem ipsum dolor sit amet, consectetur adipiscing elit. `}</div>
       </div>
-      <img
+      <Image
         className="absolute top-[0px] left-[93px] w-[77px] h-[77px]"
         alt=""
+        width={100}
+        height={100}
         src={iconImageUrl}
         style={icon3Style}
       />

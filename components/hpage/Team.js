@@ -1,4 +1,6 @@
-const TeamMemberCard = ({
+import Image from 'next/image'
+
+const Team = ({
   avatarImageSrc,
   personName,
   skillLabel,
@@ -8,9 +10,11 @@ const TeamMemberCard = ({
   return (
     <div className="self-stretch flex-1 rounded-3xs bg-lightsteelblue flex flex-col items-start justify-start p-6 text-center text-lg text-gray1-100 font-text-lg-semibold">
       <div className="self-stretch flex flex-col items-center justify-start gap-[20px]">
-        <img
+        <Image
           className="rounded-21xl w-20 h-20 object-cover"
           alt=""
+          width={100}
+          height={100}
           src={avatarImageSrc}
         />
         <div className="self-stretch flex flex-col items-center justify-start gap-[16px]">
@@ -28,14 +32,18 @@ const TeamMemberCard = ({
             </div>
           </div>
           <div className="self-stretch flex flex-row items-center justify-center gap-[16px]">
-            <img
+            <Image
               className="relative w-5 h-5 overflow-hidden shrink-0"
               alt=""
+              width={100}
+              height={100}
               src={socialIconLabel}
             />
-            <img
+            <Image
               className="relative w-5 h-5 overflow-hidden shrink-0"
               alt=""
+              width={100}
+              height={100}
               src={socialIconImageUrl}
             />
           </div>
@@ -45,4 +53,4 @@ const TeamMemberCard = ({
   );
 };
 
-export default TeamMemberCard;
+export default Team;

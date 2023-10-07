@@ -1,14 +1,18 @@
-import { Form, GetStarted, Mentor, Overview, Quiz } from '@/components/hpage'
+import Image from 'next/image'
 
+import { Form, GetStarted, Mentor, Overview, Quiz } from '@/components/hpage'
+import { group4, ellipse, ellipse2, whatsapp } from '@/assests';
 
 export default function Home() {
   return (
     <div className='flex justify-center align-middle items-center'>
       <div className="relative bg-white w-full h-[3616px] overflow-hidden text-left text-[23.04px] text-black font-text-lg-semibold">
-        <img
+        <Image
           className="absolute top-[163px] left-[0px] w-[414px] h-[420.64px]"
           alt=""
-          src="/group-458.svg"
+          width={100}
+          height={100}
+          src={group4}
         />
         <div className="absolute top-[800px] left-[0px] bg-lightsteelblue w-[1440px] h-[500px] overflow-hidden text-center text-base text-royalblue">
           <div className="absolute top-[16px] left-[338px] w-[768px] flex flex-col items-start justify-start gap-[12px]">
@@ -19,10 +23,12 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute top-[141px] left-[768px] rounded-[50%] box-border w-[494px] h-[494px] border-[3px] border-solid border-royalblue" />
-        <img
+        <Image
           className="absolute top-[163px] left-[791px] rounded-[50%] w-[494px] h-[494px] object-cover"
           alt=""
-          src="/ellipse-169@2x.png"
+          width={100}
+          height={100}
+          src={ellipse2}
         />
         <div className="absolute top-[86px] left-[69px] rounded-[32px] w-[582px] h-[388px]" />
         <b className="absolute top-[220px] left-[97px] text-[57.33px] inline-block w-[583px] h-[220px]">
@@ -50,10 +56,12 @@ export default function Home() {
         <div className="absolute top-[577px] left-[817px] rounded-[50%] bg-royalblue box-border w-[42.84px] h-[42.84px] border-[0.8px] border-solid border-mediumslateblue" />
         <div className="absolute top-[120px] left-[750px] rounded-[688.5px] box-border w-[535px] h-[541px] border-[0.8px] border-solid border-royalblue" />
         <Form />
-        <img
+        <Image
           className="absolute top-[210px] left-[50px] w-2.5 h-[10.16px]"
           alt=""
-          src="/ellipse-159.svg"
+          width={100}
+          height={100}
+          src={ellipse}
         />
         <div className="absolute top-[33px] left-[776px] font-medium inline-block w-24 h-6">
           Mentors
@@ -68,10 +76,12 @@ export default function Home() {
           Contact Us
         </div>
         <Quiz />
-        <img
+        <Image
           className="absolute top-[0px] left-[0px] w-[366px] h-[212px] object-cover"
           alt=""
-          src="/whatsapp-image-20230930-at-15-1@2x.png"
+          width={100}
+          height={100}
+          src={whatsapp}
         />
         <Overview />
         <div className="absolute top-[2560px] left-[115px] text-lgi-2 leading-[100%] font-light font-lato inline-block w-[626px] h-[258px]">
@@ -116,8 +126,8 @@ export default function Home() {
           Contact Us
         </div>
         <div className="absolute top-[3020px] left-[115px] rounded-lg flex flex-row items-start justify-start text-lg text-white">
-          <div className="rounded-lg bg-cornflowerblue shadow-[0px_1px_2px_rgba(16,_24,_40,_0.05),_0px_0px_0px_4px_#f4ebff] overflow-hidden flex flex-row items-center justify-center py-4 px-7 border-[1px] border-solid border-cornflowerblue">
-            <div className="relative leading-[28px] font-semibold">Submit</div>
+          <div className="rounded-lg bg-[#79A0F0] shadow-[0px_1px_2px_rgba(16,_24,_40,_0.05),_0px_0px_0px_4px_#f4ebff] overflow-hidden flex flex-row items-center justify-center py-4 px-7 border-[1px] border-solid border-cornflowerblue">
+            <button className="leading-[28px] font-semibold">Submit</button>
           </div>
         </div>
       </div>

@@ -1,3 +1,7 @@
+import Image from 'next/image'
+
+import { social1 } from '@/assests';
+
 const OverviewContainer = () => {
   return (
     <div className="absolute top-[3180px] left-[0px] bg-gray1-300 w-[1440px] flex flex-col items-start justify-start text-left text-sm text-darkgray font-text-lg-semibold">
@@ -296,30 +300,40 @@ const OverviewContainer = () => {
               © 2023 Edtus. All rights reserved.
             </div>
             <div className="flex flex-row items-center justify-start gap-[24px]">
-              <img
+              <Image
                 className="relative w-6 h-6 overflow-hidden shrink-0"
                 alt=""
-                src="/social-icon2.svg"
+                width={100}
+                height={100}
+                src={social1}
               />
-              <img
+              <Image
                 className="relative w-6 h-6 overflow-hidden shrink-0"
                 alt=""
-                src="/social-icon3.svg"
+                width={100}
+                height={100}
+                src={social1}
               />
-              <img
+              <Image
                 className="relative w-6 h-6 overflow-hidden shrink-0"
                 alt=""
-                src="/social-icon4.svg"
+                width={100}
+                height={100}
+                src={social1}
               />
-              <img
+              <Image
                 className="relative w-6 h-6 overflow-hidden shrink-0"
                 alt=""
-                src="/social-icon5.svg"
+                width={100}
+                height={100}
+                src={social1}
               />
-              <img
+              <Image
                 className="relative w-6 h-6"
                 alt=""
-                src="/social-icon6.svg"
+                width={100}
+                height={100}
+                src={social1}
               />
             </div>
           </div>

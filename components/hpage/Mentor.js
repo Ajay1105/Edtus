@@ -1,4 +1,7 @@
-import TeamMemberCard from "./Team";
+import Image from 'next/image'
+
+import Team from "./Team";
+import {avatar1, social1} from '@/assests/index';
 
 const MentorCard = () => {
   return (
@@ -18,26 +21,28 @@ const MentorCard = () => {
         </div>
       </div>
       <div className="w-[1200px] flex flex-row items-start justify-start gap-[32px] text-lg text-gray1-100">
-        <TeamMemberCard
-          avatarImageSrc="/avatar@2x.png"
+        <Team
+          avatarImageSrc={avatar1}
           personName="Yuvraj Mehta"
           skillLabel="Skills"
-          socialIconLabel="/social-icon.svg"
-          socialIconImageUrl="/social-icon1.svg"
+          socialIconLabel={social1}
+          socialIconImageUrl={social1}
         />
-        <TeamMemberCard
-          avatarImageSrc="/avatar1@2x.png"
+        <Team
+          avatarImageSrc={avatar1}
           personName="Narendra"
           skillLabel="Skills"
-          socialIconLabel="/social-icon.svg"
-          socialIconImageUrl="/social-icon1.svg"
+          socialIconLabel={social1}
+          socialIconImageUrl={social1}
         />
         <div className="self-stretch flex-1 rounded-3xs bg-lightsteelblue flex flex-col items-start justify-start p-6">
           <div className="self-stretch flex flex-col items-center justify-start gap-[20px]">
-            <img
+            <Image
               className="rounded-21xl w-20 h-20 object-cover"
               alt=""
-              src="/avatar1@2x.png"
+              src={avatar1}
+              width={100}
+              height={100}
             />
             <div className="self-stretch flex flex-col items-center justify-start gap-[16px]">
               <div className="self-stretch flex flex-col items-center justify-start gap-[8px]">
@@ -56,26 +61,30 @@ const MentorCard = () => {
                 </div>
               </div>
               <div className="self-stretch flex flex-row items-center justify-center gap-[16px]">
-                <img
+                <Image
                   className="relative w-5 h-5 overflow-hidden shrink-0"
                   alt=""
-                  src="/social-icon.svg"
+                  src={social1}
+                  width={100}
+                  height={100}
                 />
-                <img
+                <Image
                   className="relative w-5 h-5 overflow-hidden shrink-0"
                   alt=""
-                  src="/social-icon1.svg"
+                  src={social1}
+                  width={100}
+                  height={100}
                 />
               </div>
             </div>
           </div>
         </div>
-        <TeamMemberCard
-          avatarImageSrc="/avatar@2x.png"
+        <Team
+          avatarImageSrc={avatar1}
           personName="Yuvraj Mehta"
           skillLabel="Skills."
-          socialIconLabel="/social-icon.svg"
-          socialIconImageUrl="/social-icon1.svg"
+          socialIconLabel={social1}
+          socialIconImageUrl={social1}
         />
       </div>
     </div>

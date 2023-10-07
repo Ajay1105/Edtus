@@ -1,4 +1,7 @@
+import Image from 'next/image'
+
 import GetStartedContainer from "./GetStarted";
+import {screenshot} from '@/assests'
 
 const QuizForm = () => {
   return (
@@ -17,10 +20,12 @@ const QuizForm = () => {
         <p className="m-0">&nbsp;</p>
         <p className="m-0">Take a Quiz</p>
       </div>
-      <img
+      <Image 
         className="absolute top-[100px] left-[965px] w-[386px] h-[333px] object-cover"
         alt=""
-        src="/screenshot-20230930-142529-1@2x.png"
+        width={100}
+        height={100}
+        src={screenshot}
       />
       <GetStartedContainer buttonText="Attempt Quiz" propTop="337px" />
       <div className="absolute top-[25px] left-[337px] text-base leading-[24px] font-semibold text-royalblue text-center inline-block w-[768px]">

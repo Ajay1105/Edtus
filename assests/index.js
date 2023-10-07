@@ -4,5 +4,17 @@ import laptop from './laptop.png'
 import student from './student.png'
 import emailImg from './emailImg.png'
 import mobile from './mobile.png'
+import avatar1 from './avatar1.png'
+import social1 from './social-icon.svg'
+import group4 from './group4.svg'
+import ellipse from './ellipse.svg'
+import ellipse2 from './ellipse2.png'
+import whatsapp from './whatsapp.png'
+import child from './child.png'
+import icon5 from './icon-5.svg'
+import icon3 from './icon-3.svg'
+import icon1 from './icon-1.svg'
+import icon4 from './icon-4.svg'
+import screenshot from './screenshot.png'
 
-export {logo, success, laptop, student, emailImg, mobile}
+export {logo, success, laptop, student, emailImg, mobile, avatar1, social1, group4, ellipse, ellipse2, whatsapp, child, icon5, icon1, icon3, icon4, screenshot}
