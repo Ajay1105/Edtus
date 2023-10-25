@@ -1,4 +1,3 @@
-import {Hero, Mission, Navbar, Contact} from '@/components/homepage'
 import {Card, Form, GetStarted, Mentor, Overview, Quiz, Team} from '@/components/hpage'
 
  

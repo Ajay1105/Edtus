@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 import StudentSurvey from './studentSurvey.js';
 import QuestionCard from "./QuestionCard.jsx";
-import { Navbar } from "../homepage";
+import { Navbar } from "../homep";
 
 const Form = (props) => {
   const Router = useRouter();

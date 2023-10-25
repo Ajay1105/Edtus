@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 import questions from "./questions";
 import QuestionCard from "./QuestionCard";
-import { Navbar } from "../homepage";
+import { Navbar } from "../homep";
 
 const Questionmap = () => {
   const Router = useRouter();
