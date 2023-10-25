@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>
+        <body className='py-6 md:px-12'>
           {children}
         </body>
       </html>

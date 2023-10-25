@@ -16,8 +16,8 @@ export default function Home() {
         <div>
           <h3>{blog.title}</h3>
           <p>
-            {blog.blog.substring(0, 100)}...
-            <button type="button" onClick={() => router.push(`/blog/${blog.id}`)}>Read more</button>
+            {blog.blog.substring(0, 100)}
+            <button type="button" onClick={() => router.push(`/blog/${blog.id}`)} className=" text-blue-600">...Read more</button>
           </p>
         </div>
       ))}

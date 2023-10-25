@@ -16,5 +16,10 @@ import icon3 from './icon-3.svg'
 import icon1 from './icon-1.svg'
 import icon4 from './icon-4.svg'
 import screenshot from './screenshot.png'
+import ellipse170 from './Ellipse170.png'
+import placeholder from './placeholder.png'
+import laptop2 from './laptop2.png'
+import student2 from './student2.png'
+import faculty from './faculty.png'
 
-export {logo, success, laptop, student, emailImg, mobile, avatar1, social1, group4, ellipse, ellipse2, whatsapp, child, icon5, icon1, icon3, icon4, screenshot}
+export {logo, success, laptop, laptop2, student, emailImg, mobile, avatar1, social1, group4, ellipse, ellipse2, whatsapp, child, icon5, icon1, icon3, icon4, screenshot, ellipse170, placeholder, student2, faculty}
