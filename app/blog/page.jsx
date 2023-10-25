@@ -1,5 +1,5 @@
 'use client'
-import { Navbar } from "@/components/homepage";
+import { Navbar } from "@/components/homep";
 import blogs from "./blogs.js";
 import { useRouter } from "next/navigation";
 

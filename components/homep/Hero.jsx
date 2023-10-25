@@ -1,7 +1,11 @@
+"use client"
 import Image from "next/image";
 import { ellipse2, ellipse170, placeholder } from "@/assests";
+import { useRouter } from "next/navigation";
+
 
 const Hero = () => {
+  const Router = useRouter();
   return (
     <div className="flex flex-col md:flex-row my-20 items-center justify-center">
       <div className="flex flex-col md:mr-20">
@@ -20,7 +24,7 @@ const Hero = () => {
           giggle and spark their curiosity while exploring the fascinating realm
           of robots."
         </div>
-        <button className=" bg-[#79A0F0] mt-6 px-4 py-4 w-[124px] h-[54px] rounded-xl text-white">
+        <button className=" bg-[#79A0F0] mt-6 px-4 py-4 w-[124px] h-[54px] rounded-xl text-white" onClick={()=>{Router.push('/survey')}}>
           Take Survey
         </button>
       </div>

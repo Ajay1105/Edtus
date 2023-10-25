@@ -1,10 +1,9 @@
 "use client"
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 import StudentSurvey from '@/components/surveyforms/studentSurvey.js'
 import QuestionCard from "@/components/surveyforms/QuestionCard.jsx";
-import { Navbar } from "@/components/homepage";
+import { Navbar } from "@/components/homep";
 
 const page = () => {
   
