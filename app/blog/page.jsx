@@ -1,26 +1,34 @@
-'use client'
+"use client";
 import { Navbar } from "@/components/homep";
 import blogs from "./blogs.js";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-
   const router = useRouter();
 
   return (
-    <div>
+    <>
       <Navbar />
-      <h1 className="text-[#FF6600] text-4xl font-semibold">Blog</h1>
-
-      {blogs.map((blog) => (
+      <div className="flex mt-6 justify-center align-middle items-center flex-col">
+        <h1 className="text-blue-600 text-5xl italic mb-8 font-semibold">Blogs</h1>
         <div>
-          <h3>{blog.title}</h3>
-          <p>
-            {blog.blog.substring(0, 100)}
-            <button type="button" onClick={() => router.push(`/blog/${blog.id}`)} className=" text-blue-600">...Read more</button>
-          </p>
+          {blogs.map((blog) => (
+            <div  className="mb-8">
+              <h3 className="text-3xl text-[#FF6600] mb-2">{blog.title}</h3>
+              <p>
+                {blog.blog.substring(0, 100)}
+                <button
+                  type="button"
+                  onClick={() => router.push(`/blog/${blog.id}`)}
+                  className=" text-blue-600"
+                >
+                  ...Read more
+                </button>
+              </p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </>
   );
 }
