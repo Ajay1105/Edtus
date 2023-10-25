@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="flex mt-6 justify-center align-middle items-center flex-col">
+      <div className="mx-4 md:mx-0 flex mt-6 justify-center align-middle items-center flex-col">
         <h1 className="text-blue-600 text-5xl italic mb-8 font-semibold">Blogs</h1>
         <div>
           {blogs.map((blog) => (

@@ -6,8 +6,8 @@ export default function SearchBar({ params }) {
   return (
     <>
     <Navbar/>
-    <h1 className="text-[#FF6600] text-4xl font-semibold mt-10">{blogs[index].title}</h1>
-      <p>{blogs[index].blog}</p>
+    <h1 className="mx-4 md:mx-0 text-[#FF6600] text-4xl font-semibold mt-10">{blogs[index].title}</h1>
+      <p className="mx-4 mt-6 md:mx-0 ">{blogs[index].blog}</p>
     </>
   );
 }
