@@ -1,4 +1,4 @@
-const URI = "mongodb+srv://Ajay:aky11052003@cluster0.ukq9pga.mongodb.net/clerk?retryWrites=true&w=majority";
+const URI = process.env.NEXT_PUBLIC_MONGO_URI;
 
 import mongoose from 'mongoose';
 
