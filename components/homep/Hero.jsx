@@ -7,13 +7,15 @@ import { useRouter } from "next/navigation";
 const Hero = () => {
   const Router = useRouter();
   return (
-    <div className="flex flex-col md:flex-row my-20 items-center justify-center">
+    <div className="flex flex-col ml-6 md:ml-0 md:flex-row my-20 items-center justify-center">
       <div className="flex flex-col md:mr-20">
         <div className="flex left-0 h-auto mx-1 md:w-[583px] md:h-[220px]">
           <b className="text-3xl md:text-[57.33px]">
             <span>{`Where Kids Learn `}</span>
+            <div className="h-1 md:h-4 w-[100vw]"/>
             <span className="text-[#4883FF]">Robotics</span>
             <span>{` with a `}</span>
+            <div className="h-1 md:h-4 w-[100vw]"/>
             <span className="text-[#4883FF]">Giggle</span>
             <span>{` and a `}</span>
             <span className="text-[#4883FF]">Spark!</span>
