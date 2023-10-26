@@ -12,19 +12,20 @@ const QuestionCard = (props) => {
 
   return (
     <div className="flex flex-col w-4/5 my-2 p-5 outline outline-black outline-1 rounded-lg">
-      <p className=" text-xl text-black">{props.question}</p>
+      <p className=" text-xl mb-1 text-black">{props.question}</p>
       {props.options.map((option) => {
-        return(
-        <div >
-          <p>{option}</p>{" "}
-          <input
-            type="checkbox"
-            checked={selectedOption === option}
-            onChange={handleChange}
-            value={option}
-            className="form-checkbox h-5 w-5 text-[#FF6600] border-2 border-[#FF6600] rounded-full focus:ring-2 focus:ring-[#FF6600]"
-          />{" "}
-        </div>)
+        return (
+          <div className="flex flex-col md:flex-row">
+            <input
+              type="checkbox"
+              checked={selectedOption === option}
+              onChange={handleChange}
+              value={option}
+              className="form-checkbox h-5 w-5 my-2 text-[#FF6600] border-2 border-[#FF6600] rounded-full focus:ring-2 focus:ring-[#FF6600]"
+            />
+            <p className="md:mx-4 my-2">{option}</p>
+          </div>
+        );
       })}
     </div>
   );

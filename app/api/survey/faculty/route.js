@@ -18,18 +18,14 @@ export async function POST(req, res) {
     typeQuestion: type,
     questions: ans,
   };
-
-  console.log(ans);
   
   await connectDB();
-  const student = await FacultyForm.findOne().exec();
  
-  const result = await StudentForm.findOneAndUpdate(
+  const result = await FacultyForm.findOneAndUpdate(
     { userId: userId },
     { $push: { data: obj } },
     { new: true }
   ).exec();
-  console.log("result", result);
 
   return NextResponse.json(
     {

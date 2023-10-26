@@ -60,6 +60,7 @@ const page = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="text-2xl ml-[2.75rem] outline outline-2 outline-black rounded-lg"
+            required={true}
           />
         </div>
         <div className="my-4">
@@ -73,6 +74,7 @@ const page = () => {
             value={school}
             onChange={(e) => setSchool(e.target.value)}
             className="text-2xl ml-2 outline outline-2 outline-black rounded-lg"
+            required={true}
           />
         </div>
         <div className="my-4">
@@ -86,6 +88,7 @@ const page = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="text-2xl ml-2 outline outline-2 outline-black rounded-lg"
+            required={true}
           />
         </div>
         <button
