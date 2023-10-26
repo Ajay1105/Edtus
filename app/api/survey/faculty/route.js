@@ -1,8 +1,7 @@
 import { getAuth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import connectDB from '../../mongodb/connectDB.js'
-import Student from '@/Model/Student'
-import StudentForm from "@/Model/StudentSurvey";
+import FacultyForm from "@/Model/FacultySurvey";
 
 export async function POST(req, res) {
   const { userId } = getAuth(req);
@@ -23,10 +22,10 @@ export async function POST(req, res) {
   console.log(ans);
   
   await connectDB();
-  const student = await Student.findOne({ userId: userId }).exec();
+  const student = await FacultyForm.findOne().exec();
  
   const result = await StudentForm.findOneAndUpdate(
-    { student: student },
+    { userId: userId },
     { $push: { data: obj } },
     { new: true }
   ).exec();
