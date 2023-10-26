@@ -24,7 +24,7 @@ const page = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/survey/faculty",
+          "https://edtus.vercel.app/api/survey/faculty",
           {
             method: "POST",
             body: JSON.stringify({

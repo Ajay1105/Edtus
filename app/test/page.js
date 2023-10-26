@@ -16,7 +16,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
-    const response = await fetch("http://localhost:3000/api/test/teststatus", {
+    const response = await fetch("https://edtus.vercel.app/api/test/teststatus", {
       method: "GET",
     });
     const data = await response.json();

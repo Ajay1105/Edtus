@@ -11,10 +11,13 @@ const page = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password == facultyPassword) {
+    if(name == "" || school == ""){
+      alert ("You can't leave any input blank");
+    } 
+    else if (password == facultyPassword) {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/survey/facultyauth",
+          "https://edtus.vercel.app/api/survey/facultyauth",
           {
             method: "POST",
             body: JSON.stringify({
@@ -60,7 +63,6 @@ const page = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="text-2xl ml-[2.75rem] outline outline-2 outline-black rounded-lg"
-            required={true}
           />
         </div>
         <div className="my-4">
@@ -74,7 +76,6 @@ const page = () => {
             value={school}
             onChange={(e) => setSchool(e.target.value)}
             className="text-2xl ml-2 outline outline-2 outline-black rounded-lg"
-            required={true}
           />
         </div>
         <div className="my-4">
@@ -88,7 +89,6 @@ const page = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="text-2xl ml-2 outline outline-2 outline-black rounded-lg"
-            required={true}
           />
         </div>
         <button

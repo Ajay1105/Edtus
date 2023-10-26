@@ -12,7 +12,7 @@ const page = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/api/mongodb/finduser",
+        "https://edtus.vercel.app/api/mongodb/finduser",
         {
           method: "POST",
           body: JSON.stringify({

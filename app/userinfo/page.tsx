@@ -11,7 +11,7 @@ export default function Example() {
  
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/auth', {
+      const response = await fetch('https://edtus.vercel.app/api/auth', {
         method: 'GET',
       });
 

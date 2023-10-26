@@ -31,7 +31,7 @@ const Questionmap = () => {
     });
 
     try {
-      await fetch("http://localhost:3000/api/testscore", {
+      await fetch("https://edtus.vercel.app/api/testscore", {
         method: "POST",
         body: JSON.stringify({
           score: score,

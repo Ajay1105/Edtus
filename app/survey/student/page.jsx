@@ -23,7 +23,7 @@ const page = () => {
   const handleSubmit = () => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/survey/student', {
+        const response = await fetch('https://edtus.vercel.app/api/survey/student', {
           method: 'POST',
           body:JSON.stringify({
               type:StudentSurvey[page].type,
