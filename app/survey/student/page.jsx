@@ -50,8 +50,12 @@ const page = () => {
         <>
           <Navbar />
           <div className="flex flex-col items-center">
-            <h1 className="text-[#FF6600] text-4xl font-semibold">Survey Form</h1>
-            <h3 className="text-[#FF6600] text-4xl font-semibold">{StudentSurvey[page].type}</h3>
+          <h1 className="text-blue-500 mt-5 text-4xl italic font-semibold">
+          Survey Form
+        </h1>
+        <h3 className="text-[#FF6600] text-3xl mx-3 md:mx-0 my-4 font-semibold">
+          {StudentSurvey[page].type}
+        </h3>
             {StudentSurvey[page].questions.map((question) => (
               <QuestionCard
                 key={question.id}

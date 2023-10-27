@@ -56,7 +56,7 @@ const page = () => {
             <h1 className="text-blue-500 text-4xl italic font-semibold">
               Survey Form
             </h1>
-            <h3 className="text-[#FF6600] text-3xl my-4 font-semibold">
+            <h3 className="text-[#FF6600] text-3xl mx-3 md:mx-0 my-4 font-semibold">
               {facultySurvey[page].type}
             </h3>
             {facultySurvey[page].questions.map((question) => (

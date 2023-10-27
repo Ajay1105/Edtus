@@ -49,11 +49,11 @@ const page = () => {
   };
 
   return (
-    <div className="flex flex-col w-[100vw] h-[100vh] justify-center items-center align-middle">
+    <div className="mx-3 md:mx-0 flex flex-col w-[100vw] h-[100vh] justify-center items-center align-middle">
       <h1 className="text-5xl text-blue-600">Faculty Sign In</h1>
       <form onSubmit={handleSubmit} className="flex flex-col mt-6">
         <div className="my-4">
-          <label for="name" className=" text-2xl pr-2">
+          <label for="name" className=" text-2xl md:pr-2">
             Name:
           </label>
           <input
@@ -66,7 +66,7 @@ const page = () => {
           />
         </div>
         <div className="my-4">
-          <label for="school" className=" text-2xl pr-2">
+          <label for="school" className=" text-2xl md:pr-2">
             School Id:
           </label>
           <input
@@ -79,7 +79,7 @@ const page = () => {
           />
         </div>
         <div className="my-4">
-          <label for="password" className=" text-2xl pr-2">
+          <label for="password" className=" text-2xl md:pr-2">
             Password:
           </label>
           <input
